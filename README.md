@@ -99,6 +99,19 @@ Sale.java, Union_service.java e Tme_card.
 ---
 
 #### PATTERNS
+
   
+INTERPRETER:
+A classe _main contia os métodos find_employee_Commissioned(), find_employee_hourly() e find_employee_hourly(aqui) que realizavam a mesma tarefa, entretanto aplicavam uma verificação diferente para buscar uma instancia de um objeto. O design pattern intepreter foi usado para solucionar esse problema. Foi criado a interface Specification(aqui) que contém o método abstrato IsSatisfied(), além de 3 classes(aqui) que implementam essa interface, no qual cada uma realiza uma condição diferente. E por fim, os métodos do smell foram substituídos pelo método find_employee() adicionado na classe UHIF() (aqui).
+
+  
+STRATEGY:
+O Pattern  Strategy foi usado para solucionar o smell contido no método processar_pagamento() que usava alguns ifs para verificar uma instancia(aqui). Logo foi criado o método abstrato ValueOfPayment() na Classe Employee(aqui) e então implementado por cada subclasse(1, 2 , 3). E então usado no novo método processar_pagamento()(aqui);
+STRATEGY:
+Na classe PaymentSchedule foi usado o Pattern Strategy para solucionar o problema das condições no método processar_new_date_to_pay()(aqui). Portanto foi criado a interface Schedule(aqui) e os 3 métodos que a implementam (1, 2, 3), logo o método o processar_new_date_to_pay() foi reescrito(aqui). 
+MOVE METHOD:
+Os diversos metodos da classe _main(aqui) que realizam o gerenciamento dos empregados foram movidos para a classe ManagerEmployee(aqui) e os metodos handle’s e find’s movidos para classe UHIF que lida com métodos uteis para in/out(aqui).
+MOVE ACCUMULATION TO COLLECTING PARAMETER
+A classe _main possuía diversos métodos que acumulava variáveis locais para utilizar em determinados métodos(aqui), portanto essas variáveis foram removidas e adicionado métodos que tratam diretamente essas variáveis como argumentos dos métodos(aqui).
   
 </center>
