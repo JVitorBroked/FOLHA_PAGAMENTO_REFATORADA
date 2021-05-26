@@ -101,12 +101,12 @@ Sale.java, Union_service.java e Tme_card.
 #### PATTERNS
 
   
-**INTERPRETER:**
+**INTERPRETER**
 
-  A classe _main contia os métodos find_employee_Commissioned(), find_employee_hourly() e find_employee_hourly(aqui) que realizavam a mesma tarefa, entretanto aplicavam uma verificação diferente para buscar uma instancia de um objeto. O design pattern intepreter foi usado para solucionar esse problema. Foi criado a interface Specification(aqui) que contém o método abstrato IsSatisfied(), além de 3 classes(aqui) que implementam essa interface, no qual cada uma realiza uma condição diferente. E por fim, os métodos do smell foram substituídos pelo método find_employee() adicionado na classe UHIF() (aqui).
+  A classe _main contia os métodos find_employee_Commissioned(), find_employee_hourly() e find_employee_hourly()([aqui](https://github.com/JVitorBroked/Folha_Pagamento_P.S/blob/02b469339d2899e7da3183d137caafff7ff7cc6f/_main.java#L94)) que realizavam a mesma tarefa, entretanto aplicavam uma verificação diferente para buscar uma instancia de um objeto. O design pattern intepreter foi usado para solucionar esse problema. Foi criado a interface Specification([aqui](https://github.com/JVitorBroked/REFACTORED_PAYROLL/blob/main/Interfaces/Specification.java)) que contém o método abstrato IsSatisfied(), além de 3 classes([1](https://github.com/JVitorBroked/REFACTORED_PAYROLL/blob/a96e480278c1916e82993aa7fccb094f1176dad9/Class/NotSpec.java), [2](https://github.com/JVitorBroked/REFACTORED_PAYROLL/blob/a96e480278c1916e82993aa7fccb094f1176dad9/Class/HourlySpec.java), [3](https://github.com/JVitorBroked/REFACTORED_PAYROLL/blob/a96e480278c1916e82993aa7fccb094f1176dad9/Class/CommissionedSpec.java)) que implementam essa interface, no qual cada uma realiza uma condição diferente. E por fim, os métodos do smell foram substituídos pelo método find_employee() adicionado na classe UHIF() ([aqui](https://github.com/JVitorBroked/REFACTORED_PAYROLL/blob/a96e480278c1916e82993aa7fccb094f1176dad9/Class/UHIF.java#L11)).
 
   
-**STRATEGY:**
+**STRATEGY**
 
   O Pattern  Strategy foi usado para solucionar o smell contido no método processar_pagamento() que usava alguns ifs para verificar uma instancia(aqui). Logo foi criado o método abstrato ValueOfPayment() na Classe Employee(aqui) e então implementado por cada subclasse(1, 2 , 3). E então usado no novo método processar_pagamento()(aqui);
   
