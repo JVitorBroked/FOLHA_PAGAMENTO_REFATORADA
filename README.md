@@ -95,4 +95,10 @@ Problemas de Design presentem no código:
 > Há no projeto três classes que são usadas basicamente para organizar dados, são elas: 
 Sale.java, Union_service.java e Tme_card.
 
+  
+---
+
+#### PATTERNS
+  
+  
 </center>
