@@ -113,15 +113,15 @@ Sale.java, Union_service.java e Tme_card.
   
 **STRATEGY**
 
-  Na classe PaymentSchedule foi usado o Pattern Strategy para solucionar o problema das condições no método processar_new_date_to_pay()(aqui). Portanto foi criado a interface Schedule(aqui) e os 3 métodos que a implementam (1, 2, 3), logo o método o processar_new_date_to_pay() foi reescrito(aqui). 
+  Na classe PaymentSchedule foi usado o Pattern Strategy para solucionar o problema das condições no método processar_new_date_to_pay()([aqui](https://github.com/JVitorBroked/Folha_Pagamento_P.S/blob/02b469339d2899e7da3183d137caafff7ff7cc6f/Class/PaymentSchedule.java#L92)). Portanto foi criado a interface Schedule([aqui](https://github.com/JVitorBroked/REFACTORED_PAYROLL/blob/c539892c91a7f04c81c1a7ec8d2d3e94ef4e4cdf/Interfaces/Schedule.java)) e os 4 métodos que a implementam ([1](https://github.com/JVitorBroked/REFACTORED_PAYROLL/blob/c539892c91a7f04c81c1a7ec8d2d3e94ef4e4cdf/Class/ScheduleBiweekly.java), [2](https://github.com/JVitorBroked/REFACTORED_PAYROLL/blob/c539892c91a7f04c81c1a7ec8d2d3e94ef4e4cdf/Class/ScheduleMonthly.java), [3](https://github.com/JVitorBroked/REFACTORED_PAYROLL/blob/c539892c91a7f04c81c1a7ec8d2d3e94ef4e4cdf/Class/ScheduleWeekly.java) [4]()), logo o método o processar_new_date_to_pay() foi reescrito([aqui](https://github.com/JVitorBroked/REFACTORED_PAYROLL/blob/c539892c91a7f04c81c1a7ec8d2d3e94ef4e4cdf/Class/PaymentSchedule.java#L42)). 
 
  
 **MOVE METHOD**
 
-  Os diversos metodos da classe _main(aqui) que realizam o gerenciamento dos empregados foram movidos para a classe ManagerEmployee(aqui) e os metodos handle’s e find’s movidos para classe UHIF que lida com métodos uteis para in/out(aqui).
+  Os diversos metodos da classe _main([aqui](https://github.com/JVitorBroked/Folha_Pagamento_P.S/blob/02b469339d2899e7da3183d137caafff7ff7cc6f/_main.java#L129)) que realizam o gerenciamento dos empregados foram movidos para a classe ManagerEmployee([aqui](https://github.com/JVitorBroked/REFACTORED_PAYROLL/blob/c539892c91a7f04c81c1a7ec8d2d3e94ef4e4cdf/Class/ManagerEmployee.java)) e os metodos handle’s e find’s movidos para classe UHIF que lida com métodos uteis para in/out([aqui](https://github.com/JVitorBroked/REFACTORED_PAYROLL/blob/c539892c91a7f04c81c1a7ec8d2d3e94ef4e4cdf/Class/UHIF.java)).
 
   
-**MOVE ACCUMULATION TO COLLECTING PARAMETER**
+**MOVE PARAMETER**
   
   A classe _main possuía diversos métodos que acumulava variáveis locais para utilizar em determinados métodos(aqui), portanto essas variáveis foram removidas e adicionado métodos que tratam diretamente essas variáveis como argumentos dos métodos(aqui).
   
